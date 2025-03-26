@@ -1,0 +1,75 @@
+@keyframes neonColorFade {
+  0% {
+    box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+  }
+  25% {
+    box-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 40px #00ffff;
+  }
+  50% {
+    box-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00;
+  }
+  75% {
+    box-shadow: 0 0 5px #ffff00, 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 40px #ffff00;
+  }
+  100% {
+    box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+  }
+}
+
+@keyframes slideDisappearReappear {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(40vw) rotate(180deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(-40vw) rotate(360deg);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(0) rotate(540deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) rotate(720deg);
+    opacity: 1;
+  }
+}
+
+.neon-input {
+  box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+  animation: neonColorFade 0.1s infinite, slideDisappearReappear 5s infinite;
+}
+
+.neon-list {
+  box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
+  animation: neonColorFade 0.1s infinite, slideDisappearReappear 5s infinite;
+
+}
+
+.list-none{
+  list-style-type: none;
+  text-align: left;
+  background-color: rgb(36, 36, 36);
+
+}
+
+input{
+  width: 260px;
+}
+ul{
+  position: absolute;
+  padding: 4px !important;
+  margin: 0px;
+  width: 260px;
+  max-height: 200px;
+  overflow: scroll;
+
+}
+li{
+  text-align: left;
+  color: white;
+}
