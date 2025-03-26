@@ -1,6 +1,6 @@
 import "./App.css"
 
-import InputAdresses from "./components/inputAdresses";
+import InputAdresses from "./components/InputAdresses";
 import { useEffect } from "react";
 
 const AddressAutocomplete = () => {
