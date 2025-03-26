@@ -2,6 +2,7 @@ import '../styles/neon.css';
 
 import React, { useEffect, useState } from 'react';
 
+import confetti from 'canvas-confetti'; // Import de la bibliothèque
 import useDebounce from '../hooks/useDebounce'; // adapte le chemin si besoin
 
 const InputAdresses: React.FC = () => {
@@ -29,10 +30,21 @@ const InputAdresses: React.FC = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value);
+
+    // Déclenchement des confettis
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { y: 0.6 }, // Position de départ des confettis
+    });
   };
 
   return (
     <div className="bg-black min-h-screen flex items-center justify-center">
+      {/* Flammes sur les côtés */}
+      <div className="flames flames-left"></div>
+      <div className="flames flames-right"></div>
+
       <div className="relative w-96">
         <input
           type="text"

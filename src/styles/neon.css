@@ -39,6 +39,21 @@
   }
 }
 
+@keyframes flameFlicker {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2) translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 0.8;
+  }
+}
+
 .neon-input {
   box-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 40px #ff00ff;
   animation: neonColorFade 0.1s infinite, slideDisappearReappear 5s infinite;
@@ -72,4 +87,22 @@ ul{
 li{
   text-align: left;
   color: white;
+}
+
+.flames {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  background: radial-gradient(circle, rgba(255, 69, 0, 0.8), rgba(255, 140, 0, 0.6), rgba(255, 215, 0, 0.3));
+  animation: flameFlicker 1s infinite ease-in-out;
+  z-index: 10;
+}
+
+.flames-left {
+  left: 0;
+}
+
+.flames-right {
+  right: 0;
 }
